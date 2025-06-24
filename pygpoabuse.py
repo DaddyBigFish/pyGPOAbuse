@@ -30,7 +30,7 @@ parser.add_argument('-description', action='store', help='Task description (Defa
 parser.add_argument('--cleanup', action='store_true', help='Delete the Immediate‑Task XML and roll back the GPO version')
 parser.add_argument('-powershell', action='store_true', help='Use Powershell for command execution')
 parser.add_argument('-command', action='store',
-                    help='Command to execute (Default: Add john:H4x00r123.. as local Administrator)')
+                    help='Command to execute (Default: Add myadmin:123qweasdF! as local Administrator)')
 parser.add_argument('-k', action='store_true', help='Use Kerberos authentication. Grabs credentials from ccache file '
                                         '(KRB5CCNAME) based on target parameters. If valid credentials '
                                         'cannot be found, it will use the ones specified in the command '
